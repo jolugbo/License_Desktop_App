@@ -1,0 +1,32 @@
+C:\Users\Odejimi\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\bin\Debug\iBams.Utilities.dll
+C:\Users\Odejimi\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\bin\Debug\iBams.Utilities.pdb
+C:\Users\Odejimi\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\Odejimi\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\Interop.WIA.dll
+C:\Users\Odejimi\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csproj.ResolveComReference.cache
+C:\Users\Odejimi\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.dll
+C:\Users\Odejimi\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.pdb
+C:\Users\osoji\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\bin\Debug\iBams.Utilities.dll
+C:\Users\osoji\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\bin\Debug\iBams.Utilities.pdb
+C:\Users\osoji\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\osoji\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\Interop.WIA.dll
+C:\Users\osoji\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csproj.ResolveComReference.cache
+C:\Users\osoji\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.dll
+C:\Users\osoji\Documents\Visual Studio 2013\Projects\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.pdb
+C:\ibs\iBams20\iBams\iBams.Utilities\bin\Debug\iBams.Utilities.dll
+C:\ibs\iBams20\iBams\iBams.Utilities\bin\Debug\iBams.Utilities.pdb
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Debug\Interop.WIA.dll
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csproj.ResolveComReference.cache
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.dll
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.pdb
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\jolufemi\Documents\Visual Studio 2013\Projects\iBams\iBams.Utilities\bin\Debug\iBams.Utilities.dll
+C:\Users\jolufemi\Documents\Visual Studio 2013\Projects\iBams\iBams.Utilities\bin\Debug\iBams.Utilities.pdb
+C:\Users\jolufemi\Documents\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\Interop.WIA.dll
+C:\Users\jolufemi\Documents\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csproj.ResolveComReference.cache
+C:\Users\jolufemi\Documents\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.dll
+C:\Users\jolufemi\Documents\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.pdb
+H:\Doc\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csprojResolveAssemblyReference.cache
+H:\Doc\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\Interop.WIA.dll
+H:\Doc\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.csproj.ResolveComReference.cache
+H:\Doc\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.dll
+H:\Doc\Visual Studio 2013\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.pdb

@@ -1,0 +1,6 @@
+C:\ibs\iBams20\iBams\iBams.Utilities\bin\Release\iBams.Utilities.dll
+C:\ibs\iBams20\iBams\iBams.Utilities\bin\Release\iBams.Utilities.pdb
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Release\Interop.WIA.dll
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Release\iBams.Utilities.csproj.ResolveComReference.cache
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Release\iBams.Utilities.dll
+C:\ibs\iBams20\iBams\iBams.Utilities\obj\Release\iBams.Utilities.pdb

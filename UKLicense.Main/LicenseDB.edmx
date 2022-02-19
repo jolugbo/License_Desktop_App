@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LicenseDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_id" />
+          </Key>
+          <Property Name="Admin_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Driver_details">
+          <Key>
+            <PropertyRef Name="id_driver" />
+          </Key>
+          <Property Name="id_driver" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="physical_id" Type="nvarchar" MaxLength="100" />
+          <Property Name="driver_first_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="driver_middle_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="driver_last_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="gender" Type="nchar" MaxLength="1" />
+          <Property Name="date_of_birth" Type="date" />
+          <Property Name="nationalty" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone_number" Type="nvarchar" MaxLength="50" />
+          <Property Name="back_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="permanent_contact_address" Type="nvarchar" MaxLength="200" />
+          <Property Name="next_of_kin" Type="nvarchar" MaxLength="200" />
+          <Property Name="next_of_kin_mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="passport_path" Type="nvarchar" MaxLength="200" />
+          <Property Name="date_registered" Type="date" />
+          <Property Name="DataCapturedBy" Type="uniqueidentifier" />
+          <Property Name="expire_date" Type="date" />
+          <Property Name="driveable_description" Type="nvarchar" MaxLength="200" />
+          <Property Name="imagetype_identifier" Type="bit" />
+          <Property Name="AM_10" Type="date" />
+          <Property Name="AM_11" Type="date" />
+          <Property Name="AM_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="A1_10" Type="date" />
+          <Property Name="A1_11" Type="date" />
+          <Property Name="A1_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="A2_10" Type="date" />
+          <Property Name="A2_11" Type="date" />
+          <Property Name="A2_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="A_10" Type="date" />
+          <Property Name="A_11" Type="date" />
+          <Property Name="A_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="B1_10" Type="date" />
+          <Property Name="B1_11" Type="date" />
+          <Property Name="B1_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="B_10" Type="date" />
+          <Property Name="B_11" Type="date" />
+          <Property Name="B_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="C1_10" Type="date" />
+          <Property Name="C1_11" Type="date" />
+          <Property Name="C1_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="C_10" Type="date" />
+          <Property Name="C_11" Type="date" />
+          <Property Name="C_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="D1_10" Type="date" />
+          <Property Name="D1_11" Type="date" />
+          <Property Name="D1_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="D_10" Type="date" />
+          <Property Name="D_11" Type="date" />
+          <Property Name="D_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="BE_10" Type="date" />
+          <Property Name="BE_11" Type="date" />
+          <Property Name="BE_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="C1E_10" Type="date" />
+          <Property Name="C1E_11" Type="date" />
+          <Property Name="C1E_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="CE_10" Type="date" />
+          <Property Name="CE_11" Type="date" />
+          <Property Name="CE_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="D1E_10" Type="date" />
+          <Property Name="D1E_11" Type="date" />
+          <Property Name="D1E_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="DE_10" Type="date" />
+          <Property Name="DE_11" Type="date" />
+          <Property Name="DE_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="FKQ_10" Type="date" />
+          <Property Name="FKQ_11" Type="date" />
+          <Property Name="FKQ_12" Type="nvarchar" MaxLength="50" />
+          <Property Name="card_id" Type="nvarchar" MaxLength="10" />
+          <Property Name="Title" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_Driver_details_Admin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Driver_details" Type="Self.Driver_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="Admin_id" />
+            </Principal>
+            <Dependent Role="Driver_details">
+              <PropertyRef Name="DataCapturedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LicenseDBModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Driver_details" EntityType="Self.Driver_details" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Driver_details_Admin" Association="Self.FK_Driver_details_Admin">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Driver_details" EntitySet="Driver_details" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LicenseDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_id" />
+          </Key>
+          <Property Name="Admin_id" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Driver_details" Relationship="LicenseDBModel.FK_Driver_details_Admin" FromRole="Admin" ToRole="Driver_details" />
+        </EntityType>
+        <EntityContainer Name="LicenseDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Driver_details" EntityType="LicenseDBModel.Driver_details" />
+          <AssociationSet Name="FK_Driver_details_Admin" Association="LicenseDBModel.FK_Driver_details_Admin">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Driver_details" EntitySet="Driver_details" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Driver_details">
+          <Key>
+            <PropertyRef Name="id_driver" />
+          </Key>
+          <Property Name="id_driver" Type="Guid" Nullable="false" />
+          <Property Name="physical_id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="driver_first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="driver_middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="driver_last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="date_of_birth" Type="DateTime" Precision="0" />
+          <Property Name="nationalty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="back_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_contact_address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="next_of_kin" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="next_of_kin_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="passport_path" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="date_registered" Type="DateTime" Precision="0" />
+          <Property Name="DataCapturedBy" Type="Guid" />
+          <Property Name="expire_date" Type="DateTime" Precision="0" />
+          <Property Name="driveable_description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="imagetype_identifier" Type="Boolean" />
+          <Property Name="AM_10" Type="DateTime" Precision="0" />
+          <Property Name="AM_11" Type="DateTime" Precision="0" />
+          <Property Name="AM_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="A1_10" Type="DateTime" Precision="0" />
+          <Property Name="A1_11" Type="DateTime" Precision="0" />
+          <Property Name="A1_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="A2_10" Type="DateTime" Precision="0" />
+          <Property Name="A2_11" Type="DateTime" Precision="0" />
+          <Property Name="A2_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="A_10" Type="DateTime" Precision="0" />
+          <Property Name="A_11" Type="DateTime" Precision="0" />
+          <Property Name="A_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B1_10" Type="DateTime" Precision="0" />
+          <Property Name="B1_11" Type="DateTime" Precision="0" />
+          <Property Name="B1_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_10" Type="DateTime" Precision="0" />
+          <Property Name="B_11" Type="DateTime" Precision="0" />
+          <Property Name="B_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C1_10" Type="DateTime" Precision="0" />
+          <Property Name="C1_11" Type="DateTime" Precision="0" />
+          <Property Name="C1_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C_10" Type="DateTime" Precision="0" />
+          <Property Name="C_11" Type="DateTime" Precision="0" />
+          <Property Name="C_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="D1_10" Type="DateTime" Precision="0" />
+          <Property Name="D1_11" Type="DateTime" Precision="0" />
+          <Property Name="D1_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="D_10" Type="DateTime" Precision="0" />
+          <Property Name="D_11" Type="DateTime" Precision="0" />
+          <Property Name="D_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BE_10" Type="DateTime" Precision="0" />
+          <Property Name="BE_11" Type="DateTime" Precision="0" />
+          <Property Name="BE_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C1E_10" Type="DateTime" Precision="0" />
+          <Property Name="C1E_11" Type="DateTime" Precision="0" />
+          <Property Name="C1E_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CE_10" Type="DateTime" Precision="0" />
+          <Property Name="CE_11" Type="DateTime" Precision="0" />
+          <Property Name="CE_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="D1E_10" Type="DateTime" Precision="0" />
+          <Property Name="D1E_11" Type="DateTime" Precision="0" />
+          <Property Name="D1E_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DE_10" Type="DateTime" Precision="0" />
+          <Property Name="DE_11" Type="DateTime" Precision="0" />
+          <Property Name="DE_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FKQ_10" Type="DateTime" Precision="0" />
+          <Property Name="FKQ_11" Type="DateTime" Precision="0" />
+          <Property Name="FKQ_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="card_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Admin" Relationship="LicenseDBModel.FK_Driver_details_Admin" FromRole="Driver_details" ToRole="Admin" />
+        </EntityType>
+        <Association Name="FK_Driver_details_Admin">
+          <End Type="LicenseDBModel.Admin" Role="Admin" Multiplicity="0..1" />
+          <End Type="LicenseDBModel.Driver_details" Role="Driver_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="Admin_id" />
+            </Principal>
+            <Dependent Role="Driver_details">
+              <PropertyRef Name="DataCapturedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LicenseDBModelStoreContainer" CdmEntityContainer="LicenseDBEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="LicenseDBModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Driver_details">
+            <EntityTypeMapping TypeName="LicenseDBModel.Driver_details">
+              <MappingFragment StoreEntitySet="Driver_details">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="card_id" ColumnName="card_id" />
+                <ScalarProperty Name="FKQ_12" ColumnName="FKQ_12" />
+                <ScalarProperty Name="FKQ_11" ColumnName="FKQ_11" />
+                <ScalarProperty Name="FKQ_10" ColumnName="FKQ_10" />
+                <ScalarProperty Name="DE_12" ColumnName="DE_12" />
+                <ScalarProperty Name="DE_11" ColumnName="DE_11" />
+                <ScalarProperty Name="DE_10" ColumnName="DE_10" />
+                <ScalarProperty Name="D1E_12" ColumnName="D1E_12" />
+                <ScalarProperty Name="D1E_11" ColumnName="D1E_11" />
+                <ScalarProperty Name="D1E_10" ColumnName="D1E_10" />
+                <ScalarProperty Name="CE_12" ColumnName="CE_12" />
+                <ScalarProperty Name="CE_11" ColumnName="CE_11" />
+                <ScalarProperty Name="CE_10" ColumnName="CE_10" />
+                <ScalarProperty Name="C1E_12" ColumnName="C1E_12" />
+                <ScalarProperty Name="C1E_11" ColumnName="C1E_11" />
+                <ScalarProperty Name="C1E_10" ColumnName="C1E_10" />
+                <ScalarProperty Name="BE_12" ColumnName="BE_12" />
+                <ScalarProperty Name="BE_11" ColumnName="BE_11" />
+                <ScalarProperty Name="BE_10" ColumnName="BE_10" />
+                <ScalarProperty Name="D_12" ColumnName="D_12" />
+                <ScalarProperty Name="D_11" ColumnName="D_11" />
+                <ScalarProperty Name="D_10" ColumnName="D_10" />
+                <ScalarProperty Name="D1_12" ColumnName="D1_12" />
+                <ScalarProperty Name="D1_11" ColumnName="D1_11" />
+                <ScalarProperty Name="D1_10" ColumnName="D1_10" />
+                <ScalarProperty Name="C_12" ColumnName="C_12" />
+                <ScalarProperty Name="C_11" ColumnName="C_11" />
+                <ScalarProperty Name="C_10" ColumnName="C_10" />
+                <ScalarProperty Name="C1_12" ColumnName="C1_12" />
+                <ScalarProperty Name="C1_11" ColumnName="C1_11" />
+                <ScalarProperty Name="C1_10" ColumnName="C1_10" />
+                <ScalarProperty Name="B_12" ColumnName="B_12" />
+                <ScalarProperty Name="B_11" ColumnName="B_11" />
+                <ScalarProperty Name="B_10" ColumnName="B_10" />
+                <ScalarProperty Name="B1_12" ColumnName="B1_12" />
+                <ScalarProperty Name="B1_11" ColumnName="B1_11" />
+                <ScalarProperty Name="B1_10" ColumnName="B1_10" />
+                <ScalarProperty Name="A_12" ColumnName="A_12" />
+                <ScalarProperty Name="A_11" ColumnName="A_11" />
+                <ScalarProperty Name="A_10" ColumnName="A_10" />
+                <ScalarProperty Name="A2_12" ColumnName="A2_12" />
+                <ScalarProperty Name="A2_11" ColumnName="A2_11" />
+                <ScalarProperty Name="A2_10" ColumnName="A2_10" />
+                <ScalarProperty Name="A1_12" ColumnName="A1_12" />
+                <ScalarProperty Name="A1_11" ColumnName="A1_11" />
+                <ScalarProperty Name="A1_10" ColumnName="A1_10" />
+                <ScalarProperty Name="AM_12" ColumnName="AM_12" />
+                <ScalarProperty Name="AM_11" ColumnName="AM_11" />
+                <ScalarProperty Name="AM_10" ColumnName="AM_10" />
+                <ScalarProperty Name="imagetype_identifier" ColumnName="imagetype_identifier" />
+                <ScalarProperty Name="driveable_description" ColumnName="driveable_description" />
+                <ScalarProperty Name="expire_date" ColumnName="expire_date" />
+                <ScalarProperty Name="DataCapturedBy" ColumnName="DataCapturedBy" />
+                <ScalarProperty Name="date_registered" ColumnName="date_registered" />
+                <ScalarProperty Name="passport_path" ColumnName="passport_path" />
+                <ScalarProperty Name="next_of_kin_mobile" ColumnName="next_of_kin_mobile" />
+                <ScalarProperty Name="next_of_kin" ColumnName="next_of_kin" />
+                <ScalarProperty Name="permanent_contact_address" ColumnName="permanent_contact_address" />
+                <ScalarProperty Name="back_code" ColumnName="back_code" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="nationalty" ColumnName="nationalty" />
+                <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="driver_last_name" ColumnName="driver_last_name" />
+                <ScalarProperty Name="driver_middle_name" ColumnName="driver_middle_name" />
+                <ScalarProperty Name="driver_first_name" ColumnName="driver_first_name" />
+                <ScalarProperty Name="physical_id" ColumnName="physical_id" />
+                <ScalarProperty Name="id_driver" ColumnName="id_driver" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

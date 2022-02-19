@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LicenseDBModelStoreContainer" CdmEntityContainer="LicenseDBEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="LicenseDBModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Driver_details">
+      <EntityTypeMapping TypeName="LicenseDBModel.Driver_details">
+        <MappingFragment StoreEntitySet="Driver_details">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="card_id" ColumnName="card_id" />
+          <ScalarProperty Name="FKQ_12" ColumnName="FKQ_12" />
+          <ScalarProperty Name="FKQ_11" ColumnName="FKQ_11" />
+          <ScalarProperty Name="FKQ_10" ColumnName="FKQ_10" />
+          <ScalarProperty Name="DE_12" ColumnName="DE_12" />
+          <ScalarProperty Name="DE_11" ColumnName="DE_11" />
+          <ScalarProperty Name="DE_10" ColumnName="DE_10" />
+          <ScalarProperty Name="D1E_12" ColumnName="D1E_12" />
+          <ScalarProperty Name="D1E_11" ColumnName="D1E_11" />
+          <ScalarProperty Name="D1E_10" ColumnName="D1E_10" />
+          <ScalarProperty Name="CE_12" ColumnName="CE_12" />
+          <ScalarProperty Name="CE_11" ColumnName="CE_11" />
+          <ScalarProperty Name="CE_10" ColumnName="CE_10" />
+          <ScalarProperty Name="C1E_12" ColumnName="C1E_12" />
+          <ScalarProperty Name="C1E_11" ColumnName="C1E_11" />
+          <ScalarProperty Name="C1E_10" ColumnName="C1E_10" />
+          <ScalarProperty Name="BE_12" ColumnName="BE_12" />
+          <ScalarProperty Name="BE_11" ColumnName="BE_11" />
+          <ScalarProperty Name="BE_10" ColumnName="BE_10" />
+          <ScalarProperty Name="D_12" ColumnName="D_12" />
+          <ScalarProperty Name="D_11" ColumnName="D_11" />
+          <ScalarProperty Name="D_10" ColumnName="D_10" />
+          <ScalarProperty Name="D1_12" ColumnName="D1_12" />
+          <ScalarProperty Name="D1_11" ColumnName="D1_11" />
+          <ScalarProperty Name="D1_10" ColumnName="D1_10" />
+          <ScalarProperty Name="C_12" ColumnName="C_12" />
+          <ScalarProperty Name="C_11" ColumnName="C_11" />
+          <ScalarProperty Name="C_10" ColumnName="C_10" />
+          <ScalarProperty Name="C1_12" ColumnName="C1_12" />
+          <ScalarProperty Name="C1_11" ColumnName="C1_11" />
+          <ScalarProperty Name="C1_10" ColumnName="C1_10" />
+          <ScalarProperty Name="B_12" ColumnName="B_12" />
+          <ScalarProperty Name="B_11" ColumnName="B_11" />
+          <ScalarProperty Name="B_10" ColumnName="B_10" />
+          <ScalarProperty Name="B1_12" ColumnName="B1_12" />
+          <ScalarProperty Name="B1_11" ColumnName="B1_11" />
+          <ScalarProperty Name="B1_10" ColumnName="B1_10" />
+          <ScalarProperty Name="A_12" ColumnName="A_12" />
+          <ScalarProperty Name="A_11" ColumnName="A_11" />
+          <ScalarProperty Name="A_10" ColumnName="A_10" />
+          <ScalarProperty Name="A2_12" ColumnName="A2_12" />
+          <ScalarProperty Name="A2_11" ColumnName="A2_11" />
+          <ScalarProperty Name="A2_10" ColumnName="A2_10" />
+          <ScalarProperty Name="A1_12" ColumnName="A1_12" />
+          <ScalarProperty Name="A1_11" ColumnName="A1_11" />
+          <ScalarProperty Name="A1_10" ColumnName="A1_10" />
+          <ScalarProperty Name="AM_12" ColumnName="AM_12" />
+          <ScalarProperty Name="AM_11" ColumnName="AM_11" />
+          <ScalarProperty Name="AM_10" ColumnName="AM_10" />
+          <ScalarProperty Name="imagetype_identifier" ColumnName="imagetype_identifier" />
+          <ScalarProperty Name="driveable_description" ColumnName="driveable_description" />
+          <ScalarProperty Name="expire_date" ColumnName="expire_date" />
+          <ScalarProperty Name="DataCapturedBy" ColumnName="DataCapturedBy" />
+          <ScalarProperty Name="date_registered" ColumnName="date_registered" />
+          <ScalarProperty Name="passport_path" ColumnName="passport_path" />
+          <ScalarProperty Name="next_of_kin_mobile" ColumnName="next_of_kin_mobile" />
+          <ScalarProperty Name="next_of_kin" ColumnName="next_of_kin" />
+          <ScalarProperty Name="permanent_contact_address" ColumnName="permanent_contact_address" />
+          <ScalarProperty Name="back_code" ColumnName="back_code" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="nationalty" ColumnName="nationalty" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="driver_last_name" ColumnName="driver_last_name" />
+          <ScalarProperty Name="driver_middle_name" ColumnName="driver_middle_name" />
+          <ScalarProperty Name="driver_first_name" ColumnName="driver_first_name" />
+          <ScalarProperty Name="physical_id" ColumnName="physical_id" />
+          <ScalarProperty Name="id_driver" ColumnName="id_driver" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

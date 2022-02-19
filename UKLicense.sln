@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UKLicense.Main", "UKLicense.Main\UKLicense.Main.csproj", "{243C4B5D-2823-480C-8DA8-576C1ADFF6D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UKLicense.Utilities", "UKLicense.Utilities\UKLicense.Utilities.csproj", "{6925400D-27AA-474C-9538-1E9D027CC54E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LICENSE_BOARD", "LICENSE_BOARD\LICENSE_BOARD.vdproj", "{F72C6E4E-925B-45C1-9ACE-0F440004516F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{243C4B5D-2823-480C-8DA8-576C1ADFF6D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243C4B5D-2823-480C-8DA8-576C1ADFF6D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243C4B5D-2823-480C-8DA8-576C1ADFF6D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243C4B5D-2823-480C-8DA8-576C1ADFF6D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6925400D-27AA-474C-9538-1E9D027CC54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6925400D-27AA-474C-9538-1E9D027CC54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6925400D-27AA-474C-9538-1E9D027CC54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6925400D-27AA-474C-9538-1E9D027CC54E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72C6E4E-925B-45C1-9ACE-0F440004516F}.Debug|Any CPU.ActiveCfg = Debug
+		{F72C6E4E-925B-45C1-9ACE-0F440004516F}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

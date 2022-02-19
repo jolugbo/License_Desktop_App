@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LicenseDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Admin_id" />
+    </Key>
+    <Property Name="Admin_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Driver_details">
+    <Key>
+      <PropertyRef Name="id_driver" />
+    </Key>
+    <Property Name="id_driver" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="physical_id" Type="nvarchar" MaxLength="100" />
+    <Property Name="driver_first_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="driver_middle_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="driver_last_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="gender" Type="nchar" MaxLength="1" />
+    <Property Name="date_of_birth" Type="date" />
+    <Property Name="nationalty" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="back_code" Type="nvarchar" MaxLength="50" />
+    <Property Name="permanent_contact_address" Type="nvarchar" MaxLength="200" />
+    <Property Name="next_of_kin" Type="nvarchar" MaxLength="200" />
+    <Property Name="next_of_kin_mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="passport_path" Type="nvarchar" MaxLength="200" />
+    <Property Name="date_registered" Type="date" />
+    <Property Name="DataCapturedBy" Type="uniqueidentifier" />
+    <Property Name="expire_date" Type="date" />
+    <Property Name="driveable_description" Type="nvarchar" MaxLength="200" />
+    <Property Name="imagetype_identifier" Type="bit" />
+    <Property Name="AM_10" Type="date" />
+    <Property Name="AM_11" Type="date" />
+    <Property Name="AM_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="A1_10" Type="date" />
+    <Property Name="A1_11" Type="date" />
+    <Property Name="A1_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="A2_10" Type="date" />
+    <Property Name="A2_11" Type="date" />
+    <Property Name="A2_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="A_10" Type="date" />
+    <Property Name="A_11" Type="date" />
+    <Property Name="A_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="B1_10" Type="date" />
+    <Property Name="B1_11" Type="date" />
+    <Property Name="B1_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="B_10" Type="date" />
+    <Property Name="B_11" Type="date" />
+    <Property Name="B_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="C1_10" Type="date" />
+    <Property Name="C1_11" Type="date" />
+    <Property Name="C1_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="C_10" Type="date" />
+    <Property Name="C_11" Type="date" />
+    <Property Name="C_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="D1_10" Type="date" />
+    <Property Name="D1_11" Type="date" />
+    <Property Name="D1_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="D_10" Type="date" />
+    <Property Name="D_11" Type="date" />
+    <Property Name="D_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="BE_10" Type="date" />
+    <Property Name="BE_11" Type="date" />
+    <Property Name="BE_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="C1E_10" Type="date" />
+    <Property Name="C1E_11" Type="date" />
+    <Property Name="C1E_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="CE_10" Type="date" />
+    <Property Name="CE_11" Type="date" />
+    <Property Name="CE_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="D1E_10" Type="date" />
+    <Property Name="D1E_11" Type="date" />
+    <Property Name="D1E_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="DE_10" Type="date" />
+    <Property Name="DE_11" Type="date" />
+    <Property Name="DE_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="FKQ_10" Type="date" />
+    <Property Name="FKQ_11" Type="date" />
+    <Property Name="FKQ_12" Type="nvarchar" MaxLength="50" />
+    <Property Name="card_id" Type="nvarchar" MaxLength="10" />
+    <Property Name="Title" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_Driver_details_Admin">
+    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="Driver_details" Type="Self.Driver_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="Admin_id" />
+      </Principal>
+      <Dependent Role="Driver_details">
+        <PropertyRef Name="DataCapturedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LicenseDBModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Driver_details" EntityType="Self.Driver_details" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Driver_details_Admin" Association="Self.FK_Driver_details_Admin">
+      <End Role="Admin" EntitySet="Admin" />
+      <End Role="Driver_details" EntitySet="Driver_details" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LicenseDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Admin_id" />
+    </Key>
+    <Property Name="Admin_id" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Driver_details" Relationship="LicenseDBModel.FK_Driver_details_Admin" FromRole="Admin" ToRole="Driver_details" />
+  </EntityType>
+  <EntityContainer Name="LicenseDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Driver_details" EntityType="LicenseDBModel.Driver_details" />
+    <AssociationSet Name="FK_Driver_details_Admin" Association="LicenseDBModel.FK_Driver_details_Admin">
+      <End Role="Admin" EntitySet="Admins" />
+      <End Role="Driver_details" EntitySet="Driver_details" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Driver_details">
+    <Key>
+      <PropertyRef Name="id_driver" />
+    </Key>
+    <Property Name="id_driver" Type="Guid" Nullable="false" />
+    <Property Name="physical_id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="driver_first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="driver_middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="driver_last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="date_of_birth" Type="DateTime" Precision="0" />
+    <Property Name="nationalty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="back_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="permanent_contact_address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="next_of_kin" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="next_of_kin_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="passport_path" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="date_registered" Type="DateTime" Precision="0" />
+    <Property Name="DataCapturedBy" Type="Guid" />
+    <Property Name="expire_date" Type="DateTime" Precision="0" />
+    <Property Name="driveable_description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="imagetype_identifier" Type="Boolean" />
+    <Property Name="AM_10" Type="DateTime" Precision="0" />
+    <Property Name="AM_11" Type="DateTime" Precision="0" />
+    <Property Name="AM_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="A1_10" Type="DateTime" Precision="0" />
+    <Property Name="A1_11" Type="DateTime" Precision="0" />
+    <Property Name="A1_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="A2_10" Type="DateTime" Precision="0" />
+    <Property Name="A2_11" Type="DateTime" Precision="0" />
+    <Property Name="A2_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="A_10" Type="DateTime" Precision="0" />
+    <Property Name="A_11" Type="DateTime" Precision="0" />
+    <Property Name="A_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="B1_10" Type="DateTime" Precision="0" />
+    <Property Name="B1_11" Type="DateTime" Precision="0" />
+    <Property Name="B1_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="B_10" Type="DateTime" Precision="0" />
+    <Property Name="B_11" Type="DateTime" Precision="0" />
+    <Property Name="B_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C1_10" Type="DateTime" Precision="0" />
+    <Property Name="C1_11" Type="DateTime" Precision="0" />
+    <Property Name="C1_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C_10" Type="DateTime" Precision="0" />
+    <Property Name="C_11" Type="DateTime" Precision="0" />
+    <Property Name="C_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="D1_10" Type="DateTime" Precision="0" />
+    <Property Name="D1_11" Type="DateTime" Precision="0" />
+    <Property Name="D1_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="D_10" Type="DateTime" Precision="0" />
+    <Property Name="D_11" Type="DateTime" Precision="0" />
+    <Property Name="D_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BE_10" Type="DateTime" Precision="0" />
+    <Property Name="BE_11" Type="DateTime" Precision="0" />
+    <Property Name="BE_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C1E_10" Type="DateTime" Precision="0" />
+    <Property Name="C1E_11" Type="DateTime" Precision="0" />
+    <Property Name="C1E_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CE_10" Type="DateTime" Precision="0" />
+    <Property Name="CE_11" Type="DateTime" Precision="0" />
+    <Property Name="CE_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="D1E_10" Type="DateTime" Precision="0" />
+    <Property Name="D1E_11" Type="DateTime" Precision="0" />
+    <Property Name="D1E_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DE_10" Type="DateTime" Precision="0" />
+    <Property Name="DE_11" Type="DateTime" Precision="0" />
+    <Property Name="DE_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FKQ_10" Type="DateTime" Precision="0" />
+    <Property Name="FKQ_11" Type="DateTime" Precision="0" />
+    <Property Name="FKQ_12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="card_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Admin" Relationship="LicenseDBModel.FK_Driver_details_Admin" FromRole="Driver_details" ToRole="Admin" />
+  </EntityType>
+  <Association Name="FK_Driver_details_Admin">
+    <End Type="LicenseDBModel.Admin" Role="Admin" Multiplicity="0..1" />
+    <End Type="LicenseDBModel.Driver_details" Role="Driver_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="Admin_id" />
+      </Principal>
+      <Dependent Role="Driver_details">
+        <PropertyRef Name="DataCapturedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

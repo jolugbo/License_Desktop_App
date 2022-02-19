@@ -1,0 +1,11 @@
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\iBams\iBams.Utilities\obj\Debug\UKLicense.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\iBams\iBams.Utilities\obj\Debug\Interop.WIA.dll
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\iBams\iBams.Utilities\obj\Debug\UKLicense.Utilities.csproj.ResolveComReference.cache
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.dll
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\iBams\iBams.Utilities\obj\Debug\iBams.Utilities.pdb
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\UKLicense\UKLicense.Utilities\bin\Debug\UKLicense.Utilities.dll
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\UKLicense\UKLicense.Utilities\bin\Debug\UKLicense.Utilities.pdb
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\UKLicense\UKLicense.Utilities\obj\Debug\Interop.WIA.dll
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\UKLicense\UKLicense.Utilities\obj\Debug\UKLicense.Utilities.csproj.ResolveComReference.cache
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\UKLicense\UKLicense.Utilities\obj\Debug\UKLicense.Utilities.dll
+C:\Users\telugbadebo\Documents\Visual Studio 2015\Projects\UKLicense\UKLicense.Utilities\obj\Debug\UKLicense.Utilities.pdb
